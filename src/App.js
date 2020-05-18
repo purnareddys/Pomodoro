@@ -6,7 +6,7 @@ function padTime(time) {
 }
 export default function App() {
   const [title, setTitle] = useState("Let the Countdown begin");
-  const [timeLeft, SetTimeLeft] = useState(10);
+  const [timeLeft, SetTimeLeft] = useState(25 * 60);
   const [show, setShow] = useState(false);
 
   const intervelRef = useRef(null);
@@ -29,7 +29,7 @@ export default function App() {
 
     console.log(intervelRef.current);
     clearInterval(intervelRef.current);
-    intervelRef.current=null;
+    intervelRef.current = null;
     setShow(false);
   }
   function resetTimer() {
